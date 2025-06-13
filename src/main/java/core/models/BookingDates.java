@@ -1,25 +1,28 @@
 package core.models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.Date;
 
 public class BookingDates {
-    private Date checkIn;
+    @JsonProperty("checkin")
+    private Date checkin;
+    
+    @JsonProperty("checkout")
+    private Date checkout;
 
     public Date getCheckout() {
-        return checkOut;
+        return checkout;
     }
 
-    public void setCheckOut(Date checkout) {
-        this.checkOut = checkout;
+    public void setCheckout(Date checkout) {
+        this.checkout = checkout;
     }
 
-    public Date getCheckIn() {
-        return checkIn;
+    public Date getCheckin() {
+        return checkin;
     }
 
-    public void setCheckIn(Date checkIn) {
-        this.checkIn = checkIn;
+    public void setCheckin(Date checkin) {
+        this.checkin = checkin;
     }
-
-    private  Date checkOut;
 }

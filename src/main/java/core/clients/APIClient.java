@@ -61,12 +61,13 @@ public class APIClient {
                 .response();
     }
 
-    public Response getBookingById(){
-        return RestAssured
+    public Response getBookingById(int bookingId) {
+        return getRequestSpec()
+                .pathParam("id", bookingId)
                 .when()
-                .get(ApiEndpoints.BOOKINGBYID.getPath())
+                .get(ApiEndpoints.BOOKING.getPath() + "/{id}") //
                 .then()
-                .statusCode(200)
+                .log().all()
                 .extract()
                 .response();
     }

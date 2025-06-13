@@ -25,15 +25,11 @@ public class GetBookingByIdTest {
 
     @Test
     public void getBookingById() throws Exception {
-        Response response = apiClient.getBookingById();
+        Response response = apiClient.getBookingById(2);
 
         assertThat(response.getStatusCode()).isEqualTo(200);
 
         String responseBody = response.getBody().asString();
-        List<BookingById> bookingsById = objectMapper.readValue(responseBody, new TypeReference<List<BookingById>>() {
-        });
-
-        assertThat(bookingsById).isNotEmpty();
-
+        BookingById bookingsById = objectMapper.readValue(responseBody, BookingById.class);
     }
 }

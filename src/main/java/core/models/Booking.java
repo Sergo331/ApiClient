@@ -4,18 +4,18 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Booking {
-    private int bookingId;
+    private int bookingid;
 
     @JsonCreator
-    public Booking(@JsonProperty("bookingId") int bookingId){
-        this.bookingId = bookingId;
+    public Booking(@JsonProperty("bookingid") int bookingid){
+        this.bookingid = bookingid;
     }
 
     public int getBookingid(){
-        return bookingId;
+        return bookingid;
     }
 
-    public void setBookingId(int bookingId){
-        this.bookingId = bookingId;
+    public void setBookingid(int bookingid){
+        this.bookingid = bookingid;
     }
 }

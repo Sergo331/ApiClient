@@ -1,9 +1,11 @@
 package core.settings;
 
+import org.apache.http.auth.AUTH;
+
 public enum ApiEndpoints {
     PING("/ping"),
     BOOKING("/booking"),
-    BOOKINGBYID("/booking" + "/1");
+    AUTH("/auth");
 
     private final String path;
 

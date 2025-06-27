@@ -31,8 +31,7 @@ public class GetBookingTest {
 
 
         String responseBody = response.getBody().asString();
-        List<Booking> bookings = objectMapper.readValue(responseBody, new TypeReference<List<Booking>>() {
-        });
+        List<Booking> bookings = objectMapper.readValue(responseBody, new TypeReference<List<Booking>>() {});
 
         assertThat(bookings).isNotEmpty();
 
